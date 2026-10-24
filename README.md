@@ -1,4 +1,4 @@
-# chaos-compose
+# Chaos Testing Microservices with Docker Compose and Python
 
 A small chaos monkey for apps that run in Docker Compose. It crashes one service at random, keeps calling the app while the service is down, and tells you two things: how long the app ran degraded, and whether the user ever got an error.
 
