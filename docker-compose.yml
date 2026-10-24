@@ -1,0 +1,22 @@
+services:
+  menu:
+    image: python:3.13-alpine
+    container_name: menu
+    command: python -u /app/menu.py
+    volumes: ["./services:/app"]
+    restart: always
+
+  orders:
+    image: python:3.13-alpine
+    container_name: orders
+    command: python -u /app/orders.py
+    volumes: ["./services:/app"]
+    restart: always
+
+  gateway:
+    image: python:3.13-alpine
+    container_name: gateway
+    command: python -u /app/gateway.py
+    volumes: ["./services:/app"]
+    ports: ["8000:8000"]
+    restart: always
